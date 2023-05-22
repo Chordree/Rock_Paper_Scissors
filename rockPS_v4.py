@@ -1,11 +1,7 @@
+# pip install pwinput for masking human input 
+# this is similar to version3 .. i.e input is seprated from main()
+# study major diff btw version 3 and 4 .. see simlarites also  
 
-# add  multi player fuction also ...pwinput function for multiplayers
-# *** this is fine ... it handles the two players... and multi also add Pw input.. then verify
-# state the major differece between the three versions
-
-# TODO: add fuction that will separate inputs based on playmode... seem done this should go on git hub 
-#  add playmode reset or continue in present mode 
-# *** seee major diff btw version two and 4 
 import random
 import pwinput as pw
 #  note for this game      r > s,  s > p,  p > r
@@ -86,8 +82,8 @@ def main():
         p1 = input('player1 enter your name:')
         p2 = input('pls enter your name:')
 
-    # see if elif should be used here 
-    if mode == 'B':
+    # elif is used here to optimize time .. i.e if if condition is met elif is not checked  
+    elif mode == 'B':
         p1 = input('pls enter your name:')
         p2 = 'AI'
 
@@ -134,6 +130,6 @@ def main():
         if replay != 'Q':
             main()
         break
-    # if user wants to switch mode
+    # TODO: add fuction to swiched playmode without quitting 
 
 main()

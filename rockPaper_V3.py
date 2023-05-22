@@ -1,17 +1,9 @@
-# check how to implement pygame on pycharm
-# just used this code for rock paper scissors instead
-#TODO: add various modes of play ... player can be P1 or P2 if one player .. check major diff btw the 3
-# add  multi player fuction also ...pwinput function for multiplayers
+# pip install pwinput for masking user input  
 
-#TODO: add fuction that will separate inputs based on playmode
-
-# ***********************************************************
-#TODO: contribution seprate the main from the scvores ask them to continue playing or different mode 
-# look for a code where i have done that ...seem TicTacToe chg**************
 import random
 import pwinput as pw 
-# this is similar to the previous one ... check their major def guess its in a, b calling fuctions 
-# *** major diff here is that user input would still be masked on AI mode ***********>>>>delet all uneccessary coments
+# this is similar to the previous one(v2) ... check their major def guess its in a, b calling fuctions 
+# major diff here is that user input would still be masked(#) on AI mode 
 #  note for this game      r > s,  s > p,  p > r
 def play_mode():
     while True:
@@ -77,6 +69,7 @@ def main():
         p1 = input('pls enter your name:')
         p2 = 'AI'
 
+    # this function allows players to input  maximum round scores .. see max_score_handler() above 
     maximum_score = max_score_handler()
     try:
         int(maximum_score)
@@ -87,7 +80,7 @@ def main():
         print('** default  maximum score is set to 5 **')
         print('the winner would be declared once either of the player reaches', maximum_score)
 
-    # in put a function that would determine the count of where they would stop or 5 if default is selected
+    
 
     scores_p1, scores_p2 = 0, 0
     switcher = 0
@@ -124,6 +117,10 @@ def main():
         if replay != 'Q':
             main()
         break
-    # if user wants to switch mode
+    # if user wants to switch mode.. add TODO here 
 
 main()
+
+
+#TODO: contribution seprate the main from the scores ask if user wishes to continue playing or different mode 
+#...see TicTacToe_fuct repo for similar implementation 

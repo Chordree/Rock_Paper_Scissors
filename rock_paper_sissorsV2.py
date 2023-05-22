@@ -1,14 +1,13 @@
+# the major diff btw this & the other multiplayer verion is that input is masked for multiplyer and unmasked for AI mode
+# install the module pwinput for masking 
 
-# add  multi player fuction also ...pwinput function for multiplayers...do this in vscode
-
-# TODO: add fuction that will separate inputs based on playmode... rpexperiment..roc_paper_sis... rpsvv4
 import random
 import pwinput as pin 
-# **** done
-# add sleep time for computer 
-# add switch mode or continue in present mode statee or quit 
 
-# the major adv is play is masked during multiplayer and opened during single player *********** Major 
+#TODO:  add sleep time for computer 
+# add switch mode or continue in present mode state or quit .. see other versions 
+
+# the major adv is play is masked during multiplayer and opened during single player 
 #  note for this game      r > s,  s > p,  p > r
 def play_mode():
     while True:
@@ -24,8 +23,10 @@ def play_mode():
                 break
 
             if game_mode not in ['M', 'C']:
+                print('pls enter valid input i.e M or C')
                 continue
-        # the code never gets to this except block ... check why
+        # the code never gets to this except block ... see reason below 
+        # this is because it continues if input is not M or C ..i.e it returns to the begining of the while loop 
         except AttributeError:
             print('pls enter a valid input, C or M')
             continue
@@ -152,6 +153,6 @@ def main():
         break
     # if user wants to switch mode
 #TODO: add a fuctionality that will switch btw reset scores and new game mode ..
-# i.e creating a playon function in main would do
+# i.e creating a play_on function inside main() would do
 
 main()
